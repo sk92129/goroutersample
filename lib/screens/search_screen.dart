@@ -1,16 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:goroutersample/screens/appframewidget.dart';
 
 class SearchScreen extends StatelessWidget {
   const SearchScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Search'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      body: Padding(
+    return AppFrameWidget(
+      title: 'Search',
+      child: Padding(
         padding: const EdgeInsets.all(16.0),
         child: Column(
           children: [

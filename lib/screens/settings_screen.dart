@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:goroutersample/route_constants.dart';
+import 'package:goroutersample/screens/appframewidget.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('Settings'),
-        backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-      ),
-      body: ListView(
+    return AppFrameWidget(
+      title: 'Settings',
+      child: ListView(
         padding: const EdgeInsets.all(16.0),
         children: [
           const Center(
