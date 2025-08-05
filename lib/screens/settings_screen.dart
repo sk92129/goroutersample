@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'help_screen.dart';
+import 'package:go_router/go_router.dart';
+import 'package:goroutersample/route_constants.dart';
 
 class SettingsScreen extends StatelessWidget {
   const SettingsScreen({super.key});
@@ -72,10 +73,7 @@ class SettingsScreen extends StatelessWidget {
               subtitle: const Text('Get help and contact support'),
               trailing: const Icon(Icons.arrow_forward_ios),
               onTap: () {
-                Navigator.push(
-                  context,
-                  MaterialPageRoute(builder: (context) => const HelpScreen()),
-                );
+                context.goNamed(MyPage.help.toName);
               },
             ),
           ),
